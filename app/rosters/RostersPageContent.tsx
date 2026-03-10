@@ -5,9 +5,10 @@ import { useEffect, useState } from "react";
 import Card from "@/components/ui/Card";
 import Button from "@/components/ui/Button";
 import { Instagram, Youtube, Twitter, Users, Filter } from "lucide-react";
+import { RosterMember } from "@/types";
 
 export default function RostersPageContent() {
-  const [rosters, setRosters] = useState([]);
+  const [rosters, setRosters] = useState<RosterMember[]>([]);
   const [loading, setLoading] = useState(true);
   const [selectedCategory, setSelectedCategory] = useState("all");
 

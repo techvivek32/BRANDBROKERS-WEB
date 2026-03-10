@@ -5,9 +5,10 @@ import { useEffect, useState } from "react";
 import Card from "@/components/ui/Card";
 import Button from "@/components/ui/Button";
 import { Package, ExternalLink, ShoppingCart } from "lucide-react";
+import { Product } from "@/types";
 
 export default function ProductsPageContent() {
-  const [products, setProducts] = useState([]);
+  const [products, setProducts] = useState<Product[]>([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {

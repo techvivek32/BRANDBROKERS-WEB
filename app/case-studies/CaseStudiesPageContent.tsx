@@ -5,9 +5,10 @@ import { useEffect, useState } from "react";
 import Card from "@/components/ui/Card";
 import Button from "@/components/ui/Button";
 import { TrendingUp, Users, DollarSign, BarChart3 } from "lucide-react";
+import { CaseStudy } from "@/types";
 
 export default function CaseStudiesPageContent() {
-  const [caseStudies, setCaseStudies] = useState([]);
+  const [caseStudies, setCaseStudies] = useState<CaseStudy[]>([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {

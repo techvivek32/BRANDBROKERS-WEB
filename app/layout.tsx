@@ -33,7 +33,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" suppressHydrationWarnings>
+    <html lang="en" suppressHydrationWarning>
       <body className={`${inter.className} theme-transition`}>
         <ThemeProvider>
           <ClientWrapper>

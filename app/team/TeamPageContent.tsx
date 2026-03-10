@@ -4,9 +4,10 @@ import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import Card from "@/components/ui/Card";
 import { Linkedin, Mail } from "lucide-react";
+import { TeamMember } from "@/types";
 
 export default function TeamPageContent() {
-  const [team, setTeam] = useState([]);
+  const [team, setTeam] = useState<TeamMember[]>([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -87,7 +88,7 @@ export default function TeamPageContent() {
                         href={member.linkedin}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="w-12 h-12 rounded-full bg-secondary flex items-center justify-center hover:bg-secondary/80 transition-colors theme-transition">
+                        className="w-12 h-12 rounded-full bg-secondary flex items-center justify-center hover:bg-secondary/80 transition-colors theme-transition"
                       >
                         <Linkedin className="w-6 h-6" />
                       </a>

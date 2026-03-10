@@ -5,9 +5,10 @@ import { useEffect, useState } from "react";
 import Card from "@/components/ui/Card";
 import Button from "@/components/ui/Button";
 import { ExternalLink, Building2 } from "lucide-react";
+import { Client } from "@/types";
 
 export default function ClientsPageContent() {
-  const [clients, setClients] = useState([]);
+  const [clients, setClients] = useState<Client[]>([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {

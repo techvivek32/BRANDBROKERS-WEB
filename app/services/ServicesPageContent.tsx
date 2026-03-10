@@ -14,6 +14,7 @@ import {
   ArrowRight,
   CheckCircle
 } from "lucide-react";
+import { Service } from "@/types";
 
 const iconMap = {
   megaphone: Megaphone,
@@ -24,7 +25,7 @@ const iconMap = {
 };
 
 export default function ServicesPageContent() {
-  const [services, setServices] = useState([]);
+  const [services, setServices] = useState<Service[]>([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
